@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+
+    "name": "Remove right content on baidu search page!",
+    "description": "This extension use to remove right content on baidu search page!",
+    "version": "1.0",
+
+    "content_scripts": [
+        {
+            "matches": ["http://www.baidu.com/*","https://www.baidu.com/*"],
+            "css": ["mystyles.css"],
+            "run_at": "document_end",
+            "all_frames": true
+        }
+    ],
+
+    "permissions": [
+        "cookies",
+        "tabs",
+        "http://www.baidu.com/*",
+        "https://www.baidu.com/*"
+    ]
+}
